@@ -65,7 +65,7 @@ public class GameOverGUI : MonoBehaviour
 			while (guiFade < kGUITarget);
 		#endif
 		
-		Screen.showCursor = true;
+		Cursor.visible = true;
 		Screen.lockCursor = false;
 	}
 	
@@ -91,7 +91,7 @@ public class GameOverGUI : MonoBehaviour
 	{
 		Color preColor = GUI.color;
 		
-		if (Event.current.type == EventType.repaint)
+		if (Event.current.type == EventType.Repaint)
 		{
 			GUI.color = new Color (preColor.r, preColor.g, preColor.b, backgroundFade);
 			GUI.DrawTexture (new Rect (0.0f, 0.0f, Screen.width, Screen.height), background);
